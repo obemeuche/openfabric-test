@@ -2,6 +2,16 @@ plugins {
     id 'java'
 }
 
+jar {
+    manifest {
+        attributes(
+                'Main-Class': 'ai.openfabric.api'
+        )
+    }
+}
+
+sourceSets.main.java.srcDirs = ['src']
+
 group 'ai.openfabric'
 version '1.0-SNAPSHOT'
 

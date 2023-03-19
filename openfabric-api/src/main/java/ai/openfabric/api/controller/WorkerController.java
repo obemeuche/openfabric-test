@@ -16,6 +16,7 @@ public class WorkerController {
 
     private final WorkerService workerService;
 
+
     @PostMapping(path = "/hello")
     public @ResponseBody String hello(@RequestBody String name) {
         return "Hello!" + name;
@@ -36,9 +37,19 @@ public class WorkerController {
         return workerService.getWorkerStatistics();
     }
 
-    @PostMapping(path ="/switch")
-    public void startAndStopWorker(@RequestBody WorkerRequest request) {
-
+    @PostMapping(path ="/start")
+    public void startWorker(String imageName, String containerName) throws InterruptedException {
+        workerService.startWorker(imageName, containerName);
     }
+
+    @PostMapping(path = "/stop")
+    public void stopWorker(String containerId){
+        workerService.stopWorker(containerId);
+    }
+
+//    @PostMapping(path = "/list")
+//    public void listWorkers(WorkerPages workerPages){
+//
+//    }
 
 }

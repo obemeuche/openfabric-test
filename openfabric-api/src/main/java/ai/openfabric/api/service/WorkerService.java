@@ -14,5 +14,7 @@ public interface WorkerService {
 
     Integer getWorkerStatistics();
 
-    void startAndStopWorker(WorkerRequest request);
+    void startWorker(String imageName, String containerName) throws InterruptedException;
+
+    void stopWorker(String containerId);
 }

@@ -5,7 +5,9 @@ import ai.openfabric.api.pagination_criteria.WorkerPages;
 import ai.openfabric.api.repository.WorkerRepository;
 import ai.openfabric.api.request.WorkerRequest;
 import ai.openfabric.api.response.WorkerResponse;
+import ai.openfabric.api.service.DockerManager;
 import ai.openfabric.api.service.WorkerService;
+import com.github.dockerjava.api.command.CreateContainerResponse;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.data.domain.*;
@@ -19,6 +21,7 @@ import java.util.List;
 @Slf4j
 public class WorkerServiceImpl implements WorkerService {
 
+    private final DockerManager dockerManager;
     private final WorkerRepository workerRepository;
 
     @Override
@@ -89,7 +92,35 @@ public class WorkerServiceImpl implements WorkerService {
     }
 
     @Override
-    public void startAndStopWorker(WorkerRequest request) {
+    public void startWorker(String imageName, String containerName) throws InterruptedException {
 
+        dockerManager.pullImage(imageName);
+
+        String[] exposedPorts = {"8080", "8081", "5433"};
+        CreateContainerResponse containerResponse = DockerManager.createContainer(imageName, containerName, exposedPorts);
+
+        // Start the container
+        String containerId = containerResponse.getId();
+        dockerManager.startContainer(containerId);
+
+        Worker worker = Worker
+                .builder()
+                .name(containerName)
+                .port(exposedPorts[1])
+                .imageId(containerId)
+                .build();
+
+        workerRepository.save(worker);
+
+        System.out.println("Image Id " + containerId);
     }
+
+
+    @Override
+    public void stopWorker(String containerId) {
+        dockerManager.stopContainer(containerId);
+    }
+
+
+
 }

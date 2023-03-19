@@ -1,10 +1,7 @@
 package ai.openfabric.api.model;
 
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
@@ -15,6 +12,7 @@ import java.util.Date;
 @Getter
 @AllArgsConstructor
 @NoArgsConstructor
+@Builder
 @Table(name = "worker")
 public class Worker extends Datable implements Serializable {
 
@@ -26,6 +24,8 @@ public class Worker extends Datable implements Serializable {
     public String id;
 
     public String name;
+
+    private String imageId;
 
     public String port;
 
