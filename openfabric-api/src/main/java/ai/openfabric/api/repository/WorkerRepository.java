@@ -14,7 +14,7 @@ public interface WorkerRepository extends CrudRepository<Worker, String> {
 
     List<Worker> findAll();
 
-    @Query("SELECT c FROM Worker c WHERE c.name = ?1")
+    @Query("SELECT c FROM Worker c WHERE c.workerName = ?1")
     Worker findWorkerInfo(String workerName);
 
     @Query("SELECT c FROM Worker c")

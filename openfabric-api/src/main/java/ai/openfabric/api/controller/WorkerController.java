@@ -25,9 +25,9 @@ public class WorkerController {
         return "Hello!" + name;
     }
 
-    @GetMapping(path = "/all-workers")
-    public Page<Worker> listOfWorkers(WorkerPages workerPages){
-        return workerService.listOfWorkers(workerPages);
+    @GetMapping(path = "/paginated")
+    public Page<Worker> listOfPaginatedWorkers(WorkerPages workerPages){
+        return workerService.listOfPaginatedWorkers(workerPages);
     }
 
     @GetMapping(path = "/information")

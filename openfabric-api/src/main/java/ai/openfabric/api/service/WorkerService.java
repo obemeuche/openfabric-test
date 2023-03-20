@@ -11,7 +11,7 @@ import java.util.List;
 
 public interface WorkerService {
 
-    Page<Worker> listOfWorkers(WorkerPages workerPages);
+    Page<Worker> listOfPaginatedWorkers(WorkerPages workerPages);
 
     WorkerResponse getWorkerInformation(WorkerRequest request);
 

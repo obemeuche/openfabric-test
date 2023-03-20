@@ -12,6 +12,7 @@ import com.github.dockerjava.api.command.CreateContainerResponse;
 import com.github.dockerjava.api.model.Container;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.data.domain.*;
 import org.springframework.stereotype.Service;
 
@@ -28,8 +29,21 @@ public class WorkerServiceImpl implements WorkerService {
     private final DockerManager dockerManager;
     private final WorkerRepository workerRepository;
 
+    @Value("${port-1}")
+    private String PORT_1;
+
+    @Value("${port-2}")
+    private String PORT_2;
+
+    @Value("${port-3}")
+    private String PORT_3;
+
+    @Value("${port-4}")
+    private String PORT_4;
+
     @Override
-    public Page<Worker> listOfWorkers(WorkerPages workerPages) {
+    // paginates all workers on database
+    public Page<Worker> listOfPaginatedWorkers(WorkerPages workerPages) {
 
         Sort sort = Sort.by(workerPages.getSortDirection(), workerPages.getSortBy());
 
@@ -39,8 +53,7 @@ public class WorkerServiceImpl implements WorkerService {
         try {
             allWorkers = workerRepository.findWorkerByPagination(pageable);
         } catch (Exception e) {
-            log.debug("UNABLE TO RETRIEVE RECORD FROM THE DATABASE. REASON " + e.getMessage());
-            log.error("UNABLE TO RETRIEVE RECORD FROM THE DATABASE. REASON " + e.getCause());
+            System.out.println("UNABLE TO RETRIEVE RECORD FROM THE DATABASE. REASON " + e.getCause());
         }
         List<Worker> allPaginatedWorkers = new ArrayList<>();
 
@@ -54,16 +67,17 @@ public class WorkerServiceImpl implements WorkerService {
     }
 
     @Override
+    // gets all worker information from database
     public WorkerResponse getWorkerInformation(WorkerRequest request) {
         Worker worker = new Worker();
         try {
             worker = workerRepository.findWorkerInfo(request.getName());
         } catch(Exception e) {
-            log.debug("UNABLE TO RETRIEVE RECORD FROM THE DATABASE. REASON " + e.getMessage());
-            log.error("UNABLE TO RETRIEVE RECORD FROM THE DATABASE. REASON " + e.getCause());
+            System.out.println("UNABLE TO RETRIEVE RECORD FROM THE DATABASE. REASON " + e.getCause());
 
             WorkerResponse failedWorkerResponse = WorkerResponse
                     .builder()
+                    .workerName(request.getName())
                     .msg("FAILED")
                     .statusCode("99")
                     .build();
@@ -84,6 +98,7 @@ public class WorkerServiceImpl implements WorkerService {
     }
 
     @Override
+    // gets worker statistics from database
     public Integer getWorkerStatistics() {
         List<Worker> allWorkers = new ArrayList<>();
         try {
@@ -102,7 +117,7 @@ public class WorkerServiceImpl implements WorkerService {
             // Pull Image
             dockerManager.pullImage(imageName);
 
-            String[] exposedPorts = {"8080", "8081", "5433"};
+            String[] exposedPorts = {PORT_1, PORT_2, PORT_3, PORT_4};
             CreateContainerResponse containerResponse = dockerManager.createContainer(imageName, containerName, exposedPorts);
 
             // Start the worker (container)
@@ -137,12 +152,23 @@ public class WorkerServiceImpl implements WorkerService {
 
     @Override
     public void stopWorker(String containerId) {
-        dockerManager.stopContainer(containerId);
+        try {
+            // method to stop worker
+            dockerManager.stopContainer(containerId);
+        } catch (Exception e) {
+            System.out.println("AN EXCEPTION OCCURRED WHILE IMPLEMENTING THIS METHOD " + e.getCause());
+            throw new GeneralException("AN EXCEPTION OCCURRED WHILE IMPLEMENTING THIS METHOD");
+        }
     }
 
     @Override
     public List<Container> listWorkers() {
-       return dockerManager.listContainers();
+        try {
+            // method to list all worker
+            return dockerManager.listContainers();
+        } catch (Exception e){
+            throw new GeneralException("AN EXCEPTION OCCURRED WHILE IMPLEMENTING THIS METHOD");
+        }
     }
 
 

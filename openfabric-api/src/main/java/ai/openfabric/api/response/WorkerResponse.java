@@ -12,6 +12,7 @@ import java.time.LocalDateTime;
 @ToString
 @Builder
 public class WorkerResponse {
+    private String workerName;
     private String statusCode;
     private String msg;
     private String status;

@@ -21,7 +21,7 @@ public class DockerManager {
     private final DockerConfig config;
 
 
-    public void pullImage(String imageName) throws InterruptedException {
+    public void pullImage(String imageName)  {
         DockerClient dockerClient = config.dockerLogIn();
         dockerClient.pullImageCmd(imageName).exec(new PullImageResultCallback());
     }

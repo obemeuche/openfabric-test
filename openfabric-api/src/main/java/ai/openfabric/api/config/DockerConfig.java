@@ -4,20 +4,32 @@ import com.github.dockerjava.api.DockerClient;
 import com.github.dockerjava.core.DefaultDockerClientConfig;
 import com.github.dockerjava.core.DockerClientBuilder;
 import com.github.dockerjava.core.DockerClientConfig;
-import org.springframework.stereotype.Component;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
 
-@Component
+@Configuration
 public class DockerConfig {
 
+    @Value("${username}")
+     String USERNAME;
 
+    @Value("${password")
+     String PASSWORD;
+
+    @Value("${email")
+     String EMAIL;
+
+
+    @Bean
     public DockerClient dockerLogIn(){
 
         DockerClientConfig config = DefaultDockerClientConfig.createDefaultConfigBuilder()
                 .withDockerHost("unix:///var/run/docker.sock")
                 .withDockerTlsVerify(false)
-                .withRegistryUsername("obemeuche")
-                .withRegistryPassword("UdochiObeme@95")
-                .withRegistryEmail("obemeuchechi@gmail.com")
+                .withRegistryUsername(USERNAME)
+                .withRegistryPassword(PASSWORD)
+                .withRegistryEmail(EMAIL)
                 .build();
 
         DockerClient dockerClient = DockerClientBuilder.getInstance(config).build();

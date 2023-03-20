@@ -22,7 +22,7 @@ public class GlobalExceptionHandler {
         ErrorResponse errorResponse = new ErrorResponse();
         errorResponse.setMessage(ex.getMessage());
         errorResponse.setStatus(HttpStatus.INTERNAL_SERVER_ERROR);
-        errorResponse.setDebugMessage("ERROR SAVING TO THE DATABASE");
+        errorResponse.setDebugMessage("AN EXCEPTION OCCURRED WHILE IMPLEMENTING THIS METHOD");
         return new ResponseEntity<>(errorResponse, errorResponse.getStatus());
     }
 
