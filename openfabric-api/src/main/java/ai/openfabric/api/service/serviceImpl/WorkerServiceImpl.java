@@ -1,5 +1,6 @@
 package ai.openfabric.api.service.serviceImpl;
 
+import ai.openfabric.api.exception.GeneralException;
 import ai.openfabric.api.model.Worker;
 import ai.openfabric.api.pagination_criteria.WorkerPages;
 import ai.openfabric.api.repository.WorkerRepository;
@@ -8,13 +9,16 @@ import ai.openfabric.api.response.WorkerResponse;
 import ai.openfabric.api.service.DockerManager;
 import ai.openfabric.api.service.WorkerService;
 import com.github.dockerjava.api.command.CreateContainerResponse;
+import com.github.dockerjava.api.model.Container;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.data.domain.*;
 import org.springframework.stereotype.Service;
 
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.zip.DataFormatException;
 
 @Service
 @RequiredArgsConstructor
@@ -73,7 +77,7 @@ public class WorkerServiceImpl implements WorkerService {
                 .msg("SUCCESSFUL")
                 .status(worker.getStatus())
                 .port(worker.getPort())
-                .createdDate(worker.getCreatedDate())
+                .createdDate(LocalDateTime.now())
                 .build();
 
         return workerResponse;
@@ -92,27 +96,42 @@ public class WorkerServiceImpl implements WorkerService {
     }
 
     @Override
-    public void startWorker(String imageName, String containerName) throws InterruptedException {
+    public void startWorker(String imageName, String containerName) {
 
-        dockerManager.pullImage(imageName);
+        try {
+            // Pull Image
+            dockerManager.pullImage(imageName);
 
-        String[] exposedPorts = {"8080", "8081", "5433"};
-        CreateContainerResponse containerResponse = DockerManager.createContainer(imageName, containerName, exposedPorts);
+            String[] exposedPorts = {"8080", "8081", "5433"};
+            CreateContainerResponse containerResponse = dockerManager.createContainer(imageName, containerName, exposedPorts);
 
-        // Start the container
-        String containerId = containerResponse.getId();
-        dockerManager.startContainer(containerId);
+            // Start the worker (container)
+            String containerId = containerResponse.getId();
+            dockerManager.startContainer(containerId);
+            System.out.println("Started worker with Id " + containerId);
 
-        Worker worker = Worker
-                .builder()
-                .name(containerName)
-                .port(exposedPorts[1])
-                .imageId(containerId)
-                .build();
+            // saving worker information tho the database
+            Worker worker = Worker
+                    .builder()
+                    .workerName(containerName)
+                    .imageName(imageName)
+                    .port(exposedPorts[1])
+                    .imageId(containerId)
+                    .workerCreateAt(LocalDateTime.now())
+                    .build();
 
-        workerRepository.save(worker);
+            try {
+                workerRepository.save(worker);
+            }catch (Exception ex){
+                System.out.println("UNABLE TO SAVE INTO THE DATABASE " + ex.getCause());
+                throw new DataFormatException("UNABLE TO SAVE INTO THE DATABASE");
+            }
 
-        System.out.println("Image Id " + containerId);
+        } catch(Exception e){
+            System.out.println("AN EXCEPTION OCCURRED WHILE IMPLEMENTING THIS METHOD " + e.getCause());
+            throw new GeneralException("AN EXCEPTION OCCURRED WHILE IMPLEMENTING THIS METHOD");
+        }
+
     }
 
 
@@ -121,6 +140,10 @@ public class WorkerServiceImpl implements WorkerService {
         dockerManager.stopContainer(containerId);
     }
 
+    @Override
+    public List<Container> listWorkers() {
+       return dockerManager.listContainers();
+    }
 
 
 }

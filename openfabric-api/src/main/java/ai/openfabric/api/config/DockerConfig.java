@@ -1,19 +1,27 @@
-//package ai.openfabric.api.config;
-//
-//import com.github.dockerjava.core.DefaultDockerClientConfig;
-//import com.github.dockerjava.core.DockerClientConfig;
-//import org.springframework.context.annotation.Configuration;
-//
-//@Configuration
-//public class DockerConfig {
-//
-//    DockerClientConfig standard = DefaultDockerClientConfig.createDefaultConfigBuilder()
-//            .withDockerHost("tcp://docker.somewhere.tld:2376")
-//            .withDockerTlsVerify(true)
-//            .withDockerCertPath("/home/user/.docker")
-////            .withRegistryUsername(registryUser)
-////            .withRegistryPassword(registryPass)
-////            .withRegistryEmail(registryMail)
-////            .withRegistryUrl(registryUrl)
-//            .build();
-//}
+package ai.openfabric.api.config;
+
+import com.github.dockerjava.api.DockerClient;
+import com.github.dockerjava.core.DefaultDockerClientConfig;
+import com.github.dockerjava.core.DockerClientBuilder;
+import com.github.dockerjava.core.DockerClientConfig;
+import org.springframework.stereotype.Component;
+
+@Component
+public class DockerConfig {
+
+
+    public DockerClient dockerLogIn(){
+
+        DockerClientConfig config = DefaultDockerClientConfig.createDefaultConfigBuilder()
+                .withDockerHost("unix:///var/run/docker.sock")
+                .withDockerTlsVerify(false)
+                .withRegistryUsername("obemeuche")
+                .withRegistryPassword("UdochiObeme@95")
+                .withRegistryEmail("obemeuchechi@gmail.com")
+                .build();
+
+        DockerClient dockerClient = DockerClientBuilder.getInstance(config).build();
+
+        return dockerClient;
+    }
+}

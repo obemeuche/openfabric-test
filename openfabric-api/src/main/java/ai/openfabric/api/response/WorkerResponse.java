@@ -5,7 +5,7 @@ import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
 
-import java.util.Date;
+import java.time.LocalDateTime;
 
 @Getter
 @Setter
@@ -16,5 +16,5 @@ public class WorkerResponse {
     private String msg;
     private String status;
     private String port;
-    private Date createdDate;
+    private LocalDateTime createdDate;
 }

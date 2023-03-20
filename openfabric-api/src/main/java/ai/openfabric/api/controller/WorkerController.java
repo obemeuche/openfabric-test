@@ -5,9 +5,12 @@ import ai.openfabric.api.pagination_criteria.WorkerPages;
 import ai.openfabric.api.request.WorkerRequest;
 import ai.openfabric.api.response.WorkerResponse;
 import ai.openfabric.api.service.WorkerService;
+import com.github.dockerjava.api.model.Container;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 @RestController
 @RequestMapping("${node.api.path}/worker")
@@ -47,9 +50,9 @@ public class WorkerController {
         workerService.stopWorker(containerId);
     }
 
-//    @PostMapping(path = "/list")
-//    public void listWorkers(WorkerPages workerPages){
-//
-//    }
+    @PostMapping(path = "/listWorkers")
+    public List<Container> listWorkers(){
+        return workerService.listWorkers();
+    }
 
 }

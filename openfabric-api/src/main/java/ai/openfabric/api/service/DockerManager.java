@@ -1,5 +1,6 @@
 package ai.openfabric.api.service;
 
+import ai.openfabric.api.config.DockerConfig;
 import com.github.dockerjava.api.DockerClient;
 import com.github.dockerjava.api.command.CreateContainerCmd;
 import com.github.dockerjava.api.command.CreateContainerResponse;
@@ -8,22 +9,28 @@ import com.github.dockerjava.api.command.PullImageResultCallback;
 import com.github.dockerjava.api.model.Container;
 import com.github.dockerjava.api.model.ExposedPort;
 import com.github.dockerjava.api.model.Ports;
-import com.github.dockerjava.core.DockerClientBuilder;
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
 
 import java.util.List;
 
 @Component
+@RequiredArgsConstructor
 public class DockerManager {
 
-    private static final DockerClient dockerClient = DockerClientBuilder.getInstance().build();
+    private final DockerConfig config;
+
 
     public void pullImage(String imageName) throws InterruptedException {
-        dockerClient.pullImageCmd(imageName).exec(new PullImageResultCallback()).awaitCompletion();
+        DockerClient dockerClient = config.dockerLogIn();
+        dockerClient.pullImageCmd(imageName).exec(new PullImageResultCallback());
     }
 
-    public static CreateContainerResponse createContainer(String imageName, String containerName, String[] exposedPorts) {
+    public CreateContainerResponse createContainer(String imageName, String containerName, String[] exposedPorts) {
+
+        DockerClient dockerClient = config.dockerLogIn();
         CreateContainerCmd containerCmd = dockerClient.createContainerCmd(imageName);
+
         containerCmd.withName(containerName);
 
         for (String port : exposedPorts) {
@@ -38,14 +45,17 @@ public class DockerManager {
     }
 
     public void startContainer(String containerId) {
+        DockerClient dockerClient = config.dockerLogIn();
         dockerClient.startContainerCmd(containerId).exec();
     }
 
     public  void stopContainer(String containerId) {
+        DockerClient dockerClient = config.dockerLogIn();
         dockerClient.stopContainerCmd(containerId).exec();
     }
 
-    public static List<Container> listContainers() {
+    public List<Container> listContainers() {
+        DockerClient dockerClient = config.dockerLogIn();
         ListContainersCmd listCmd = dockerClient.listContainersCmd();
         return listCmd.exec();
     }

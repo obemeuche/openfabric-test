@@ -6,7 +6,7 @@ import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
 import java.io.Serializable;
-import java.util.Date;
+import java.time.LocalDateTime;
 
 @Entity()
 @Getter
@@ -21,9 +21,11 @@ public class Worker extends Datable implements Serializable {
     @GenericGenerator(name = "of-uuid", strategy = "ai.openfabric.api.model.IDGenerator")
     @Getter
     @Setter
-    public String id;
+    private String id;
 
-    public String name;
+    private String workerName;
+
+    private String imageName;
 
     private String imageId;
 
@@ -31,6 +33,6 @@ public class Worker extends Datable implements Serializable {
 
     public String status;
 
-    public Date createdDate;
+    public LocalDateTime workerCreateAt;
 
 }
