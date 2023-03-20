@@ -1,5 +1,6 @@
 package ai.openfabric.api.service.serviceImpl;
 
+import ai.openfabric.api.exception.DataBaseException;
 import ai.openfabric.api.exception.GeneralException;
 import ai.openfabric.api.model.Worker;
 import ai.openfabric.api.pagination_criteria.WorkerPages;
@@ -19,7 +20,6 @@ import org.springframework.stereotype.Service;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.zip.DataFormatException;
 
 @Service
 @RequiredArgsConstructor
@@ -125,26 +125,24 @@ public class WorkerServiceImpl implements WorkerService {
             dockerManager.startContainer(containerId);
             System.out.println("Started worker with Id " + containerId);
 
-            // saving worker information tho the database
-            Worker worker = Worker
-                    .builder()
-                    .workerName(containerName)
-                    .imageName(imageName)
-                    .port(exposedPorts[1])
-                    .imageId(containerId)
-                    .workerCreateAt(LocalDateTime.now())
-                    .build();
-
-            try {
-                workerRepository.save(worker);
-            }catch (Exception ex){
-                System.out.println("UNABLE TO SAVE INTO THE DATABASE " + ex.getCause());
-                throw new DataFormatException("UNABLE TO SAVE INTO THE DATABASE");
-            }
-
         } catch(Exception e){
-            System.out.println("AN EXCEPTION OCCURRED WHILE IMPLEMENTING THIS METHOD " + e.getCause());
-            throw new GeneralException("AN EXCEPTION OCCURRED WHILE IMPLEMENTING THIS METHOD");
+            System.out.println("AN EXCEPTION OCCURRED WHILE STARTING THE WORKER. REASON: " + e);
+            throw new GeneralException("AN EXCEPTION OCCURRED WHILE STARTING THE WORKER");
+        }
+
+        // saving worker information tho the database
+        Worker worker = Worker
+                .builder()
+                .workerName(containerName)
+                .imageName(imageName)
+                .workerCreateAt(LocalDateTime.now())
+                .build();
+
+        try {
+            workerRepository.save(worker);
+        }catch (Exception ex){
+            System.out.println("UNABLE TO SAVE INTO THE DATABASE " + ex.getCause());
+            throw new DataBaseException("UNABLE TO SAVE INTO THE DATABASE");
         }
 
     }
@@ -156,8 +154,8 @@ public class WorkerServiceImpl implements WorkerService {
             // method to stop worker
             dockerManager.stopContainer(containerId);
         } catch (Exception e) {
-            System.out.println("AN EXCEPTION OCCURRED WHILE IMPLEMENTING THIS METHOD " + e.getCause());
-            throw new GeneralException("AN EXCEPTION OCCURRED WHILE IMPLEMENTING THIS METHOD");
+            System.out.println("AN EXCEPTION OCCURRED WHILE STOPPING THE WORKER. REASON " + e);
+            throw new GeneralException("AN EXCEPTION OCCURRED WHILE STOPPING THE WORKER");
         }
     }
 
@@ -167,7 +165,8 @@ public class WorkerServiceImpl implements WorkerService {
             // method to list all worker
             return dockerManager.listContainers();
         } catch (Exception e){
-            throw new GeneralException("AN EXCEPTION OCCURRED WHILE IMPLEMENTING THIS METHOD");
+            System.out.println("AN EXCEPTION OCCURRED WHILE LISTING THE WORKERS. REASON " + e);
+            throw new GeneralException("AN EXCEPTION OCCURRED WHILE LISTING THE WORKERS");
         }
     }
 

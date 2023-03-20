@@ -5297,3 +5297,551 @@ This generated password is for development use only. Your security configuration
 20-03-2023 21:18:36.851 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.destroy - Closing JPA EntityManagerFactory for persistence unit 'default'
 20-03-2023 21:18:36.865 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown initiated...
 20-03-2023 21:18:36.906 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown completed.
+20-03-2023 21:23:07.390 [main] INFO  m.p.s.DotenvPropertySource.addToEnvironment - Initializing Dotenv with DotenvConfig{directory=null, filename=null, ignoreIfMalformed=false, ignoreIfMissing=true, systemProperties=false, prefix=null}
+20-03-2023 21:23:07.462 [main] INFO  ai.openfabric.api.Application.logStarting - Starting Application using Java 1.8.0_352 on macs-MacBook-Air-9.local with PID 38642 (/Users/dec/Downloads/openfabric-test/openfabric-api/build/classes/java/main started by dec in /Users/dec/Downloads/openfabric-test)
+20-03-2023 21:23:07.463 [main] INFO  ai.openfabric.api.Application.logStartupProfileInfo - The following 2 profiles are active: "base", "local"
+20-03-2023 21:23:10.162 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+20-03-2023 21:23:10.290 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Finished Spring Data repository scanning in 108 ms. Found 1 JPA repository interfaces.
+20-03-2023 21:23:11.668 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer.initialize - Tomcat initialized with port(s): 8080 (http)
+20-03-2023 21:23:11.690 [main] INFO  o.a.coyote.http11.Http11NioProtocol.log - Initializing ProtocolHandler ["http-nio-8080"]
+20-03-2023 21:23:11.692 [main] INFO  o.a.catalina.core.StandardService.log - Starting service [Tomcat]
+20-03-2023 21:23:11.692 [main] INFO  o.a.catalina.core.StandardEngine.log - Starting Servlet engine: [Apache Tomcat/9.0.68]
+20-03-2023 21:23:11.890 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring embedded WebApplicationContext
+20-03-2023 21:23:11.894 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext.prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 4312 ms
+20-03-2023 21:23:12.363 [main] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Starting...
+20-03-2023 21:23:12.506 [main] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Start completed.
+20-03-2023 21:23:12.800 [main] INFO  liquibase.database.log - Set default schema name to public
+20-03-2023 21:23:12.928 [main] INFO  liquibase.lockservice.log - Successfully acquired change log lock
+20-03-2023 21:23:13.618 [main] INFO  liquibase.changelog.log - Reading from public.databasechangelog
+20-03-2023 21:23:13.714 [main] INFO  liquibase.lockservice.log - Successfully released change log lock
+20-03-2023 21:23:14.372 [main] INFO  o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [name: default]
+20-03-2023 21:23:14.543 [main] INFO  org.hibernate.Version.logVersion - HHH000412: Hibernate ORM core version 5.6.12.Final
+20-03-2023 21:23:15.049 [main] INFO  o.h.annotations.common.Version.<clinit> - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+20-03-2023 21:23:15.513 [main] INFO  org.hibernate.dialect.Dialect.<init> - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+20-03-2023 21:23:17.470 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator.initiateService - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+20-03-2023 21:23:17.510 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory - Initialized JPA EntityManagerFactory for persistence unit 'default'
+20-03-2023 21:23:17.601 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration.openEntityManagerInViewInterceptor - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+20-03-2023 21:23:20.102 [main] WARN  c.g.d.core.DockerClientBuilder.build - 'dockerHttpClient' should be set.Falling back to Jersey, will be an error in future releases.
+20-03-2023 21:23:26.812 [main] INFO  com.yahoo.elide.Elide.registerCustomSerde - Registering serde for type : class java.time.Instant
+20-03-2023 21:23:26.814 [main] INFO  com.yahoo.elide.Elide.registerCustomSerde - Registering serde for type : class java.time.OffsetDateTime
+20-03-2023 21:23:27.192 [main] WARN  o.s.b.a.s.s.UserDetailsServiceAutoConfiguration.getOrDeducePassword - 
+
+Using generated security password: 9820053f-54ab-4b7d-a9f0-26b8f1488c37
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+20-03-2023 21:23:27.399 [main] INFO  o.s.s.web.DefaultSecurityFilterChain.<init> - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@14d36bb2, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@432448, org.springframework.security.web.context.SecurityContextPersistenceFilter@5e3d84a, org.springframework.security.web.header.HeaderWriterFilter@e890591, org.springframework.web.filter.CorsFilter@329548d0, org.springframework.security.web.authentication.logout.LogoutFilter@7ee02968, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4fce3ed7, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5df54296, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4452e13c, org.springframework.security.web.session.SessionManagementFilter@42c55978, org.springframework.security.web.access.ExceptionTranslationFilter@289da1bc, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@71f10042]
+20-03-2023 21:23:28.065 [main] WARN  o.s.b.a.t.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration.checkTemplateLocationExists - Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+20-03-2023 21:23:28.232 [main] INFO  o.a.coyote.http11.Http11NioProtocol.log - Starting ProtocolHandler ["http-nio-8080"]
+20-03-2023 21:23:28.265 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer.start - Tomcat started on port(s): 8080 (http) with context path ''
+20-03-2023 21:23:28.846 [main] INFO  ai.openfabric.api.Application.logStarted - Started Application in 22.337 seconds (JVM running for 25.549)
+20-03-2023 21:24:11.844 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring DispatcherServlet 'dispatcherServlet'
+20-03-2023 21:24:11.848 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet.initServletBean - Initializing Servlet 'dispatcherServlet'
+20-03-2023 21:24:11.871 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet.initServletBean - Completed initialization in 23 ms
+20-03-2023 21:24:35.116 [docker-java-stream-1811012756] ERROR c.g.d.a.async.ResultCallbackTemplate.onError - Error during callback
+com.github.dockerjava.api.exception.InternalServerErrorException: Status 500: Get "https://registry-1.docker.io/v2/library/postgres/tags/list": unauthorized: incorrect username or password
+	at com.github.dockerjava.jaxrs.filter.ResponseStatusExceptionFilter.filter(ResponseStatusExceptionFilter.java:68)
+	at org.glassfish.jersey.client.ClientFilteringStages$ResponseFilterStage.apply(ClientFilteringStages.java:171)
+	at org.glassfish.jersey.client.ClientFilteringStages$ResponseFilterStage.apply(ClientFilteringStages.java:159)
+	at org.glassfish.jersey.process.internal.Stages.process(Stages.java:147)
+	at org.glassfish.jersey.client.ClientRuntime.invoke(ClientRuntime.java:301)
+	at org.glassfish.jersey.client.JerseyInvocation.lambda$invoke$0(JerseyInvocation.java:609)
+	at org.glassfish.jersey.internal.Errors.process(Errors.java:292)
+	at org.glassfish.jersey.internal.Errors.process(Errors.java:274)
+	at org.glassfish.jersey.internal.Errors.process(Errors.java:205)
+	at org.glassfish.jersey.process.internal.RequestScope.runInScope(RequestScope.java:390)
+	at org.glassfish.jersey.client.JerseyInvocation.invoke(JerseyInvocation.java:608)
+	at com.github.dockerjava.jaxrs.JerseyDockerHttpClient.execute(JerseyDockerHttpClient.java:297)
+	at com.github.dockerjava.core.DefaultInvocationBuilder.execute(DefaultInvocationBuilder.java:228)
+	at com.github.dockerjava.core.DefaultInvocationBuilder.lambda$executeAndStream$1(DefaultInvocationBuilder.java:269)
+	at java.lang.Thread.run(Thread.java:750)
+20-03-2023 21:24:39.936 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL.logStatement - insert into public.worker (created_at, deleted_at, updated_at, image_id, image_name, port, status, worker_create_at, worker_name, id) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+20-03-2023 21:24:39.988 [http-nio-8080-exec-2] WARN  o.h.e.jdbc.spi.SqlExceptionHelper.logExceptions - SQL Error: 0, SQLState: 42703
+20-03-2023 21:24:39.990 [http-nio-8080-exec-2] ERROR o.h.e.jdbc.spi.SqlExceptionHelper.logExceptions - ERROR: column "image_id" of relation "worker" does not exist
+  Position: 64
+20-03-2023 21:24:40.001 [http-nio-8080-exec-2] INFO  o.h.e.j.b.internal.AbstractBatchImpl.release - HHH000010: On release of batch it still contained JDBC statements
+20-03-2023 21:25:50.369 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.destroy - Closing JPA EntityManagerFactory for persistence unit 'default'
+20-03-2023 21:25:50.413 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown initiated...
+20-03-2023 21:25:50.574 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown completed.
+20-03-2023 21:26:01.093 [main] INFO  m.p.s.DotenvPropertySource.addToEnvironment - Initializing Dotenv with DotenvConfig{directory=null, filename=null, ignoreIfMalformed=false, ignoreIfMissing=true, systemProperties=false, prefix=null}
+20-03-2023 21:26:01.160 [main] INFO  ai.openfabric.api.Application.logStarting - Starting Application using Java 1.8.0_352 on macs-MacBook-Air-9.local with PID 38962 (/Users/dec/Downloads/openfabric-test/openfabric-api/build/classes/java/main started by dec in /Users/dec/Downloads/openfabric-test)
+20-03-2023 21:26:01.162 [main] INFO  ai.openfabric.api.Application.logStartupProfileInfo - The following 2 profiles are active: "base", "local"
+20-03-2023 21:26:03.307 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+20-03-2023 21:26:03.403 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Finished Spring Data repository scanning in 81 ms. Found 1 JPA repository interfaces.
+20-03-2023 21:26:04.712 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer.initialize - Tomcat initialized with port(s): 8080 (http)
+20-03-2023 21:26:04.726 [main] INFO  o.a.coyote.http11.Http11NioProtocol.log - Initializing ProtocolHandler ["http-nio-8080"]
+20-03-2023 21:26:04.727 [main] INFO  o.a.catalina.core.StandardService.log - Starting service [Tomcat]
+20-03-2023 21:26:04.727 [main] INFO  o.a.catalina.core.StandardEngine.log - Starting Servlet engine: [Apache Tomcat/9.0.68]
+20-03-2023 21:26:04.907 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring embedded WebApplicationContext
+20-03-2023 21:26:04.908 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext.prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 3605 ms
+20-03-2023 21:26:05.313 [main] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Starting...
+20-03-2023 21:26:05.423 [main] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Start completed.
+20-03-2023 21:26:05.659 [main] INFO  liquibase.database.log - Set default schema name to public
+20-03-2023 21:26:05.778 [main] INFO  liquibase.lockservice.log - Successfully acquired change log lock
+20-03-2023 21:26:06.374 [main] INFO  liquibase.changelog.log - Reading from public.databasechangelog
+20-03-2023 21:26:06.445 [main] INFO  liquibase.lockservice.log - Successfully released change log lock
+20-03-2023 21:26:06.658 [main] INFO  o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [name: default]
+20-03-2023 21:26:06.733 [main] INFO  org.hibernate.Version.logVersion - HHH000412: Hibernate ORM core version 5.6.12.Final
+20-03-2023 21:26:07.056 [main] INFO  o.h.annotations.common.Version.<clinit> - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+20-03-2023 21:26:07.312 [main] INFO  org.hibernate.dialect.Dialect.<init> - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+20-03-2023 21:26:08.192 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator.initiateService - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+20-03-2023 21:26:08.208 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory - Initialized JPA EntityManagerFactory for persistence unit 'default'
+20-03-2023 21:26:08.277 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration.openEntityManagerInViewInterceptor - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+20-03-2023 21:26:10.121 [main] WARN  c.g.d.core.DockerClientBuilder.build - 'dockerHttpClient' should be set.Falling back to Jersey, will be an error in future releases.
+20-03-2023 21:26:15.305 [main] INFO  com.yahoo.elide.Elide.registerCustomSerde - Registering serde for type : class java.time.Instant
+20-03-2023 21:26:15.306 [main] INFO  com.yahoo.elide.Elide.registerCustomSerde - Registering serde for type : class java.time.OffsetDateTime
+20-03-2023 21:26:15.619 [main] WARN  o.s.b.a.s.s.UserDetailsServiceAutoConfiguration.getOrDeducePassword - 
+
+Using generated security password: 623f690f-6ca3-4139-8876-aacc1ca053cb
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+20-03-2023 21:26:15.775 [main] INFO  o.s.s.web.DefaultSecurityFilterChain.<init> - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@2ff62720, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@45295cfd, org.springframework.security.web.context.SecurityContextPersistenceFilter@70df41f9, org.springframework.security.web.header.HeaderWriterFilter@54033a65, org.springframework.web.filter.CorsFilter@2a334bac, org.springframework.security.web.authentication.logout.LogoutFilter@531299d3, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@46590dd0, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@69a3bf40, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@42c9b1ee, org.springframework.security.web.session.SessionManagementFilter@4cddc036, org.springframework.security.web.access.ExceptionTranslationFilter@690e4b00, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@8e77c5b]
+20-03-2023 21:26:16.174 [main] WARN  o.s.b.a.t.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration.checkTemplateLocationExists - Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+20-03-2023 21:26:16.300 [main] INFO  o.a.coyote.http11.Http11NioProtocol.log - Starting ProtocolHandler ["http-nio-8080"]
+20-03-2023 21:26:16.331 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer.start - Tomcat started on port(s): 8080 (http) with context path ''
+20-03-2023 21:26:16.821 [main] INFO  ai.openfabric.api.Application.logStarted - Started Application in 16.41 seconds (JVM running for 18.934)
+20-03-2023 21:26:26.129 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring DispatcherServlet 'dispatcherServlet'
+20-03-2023 21:26:26.133 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet.initServletBean - Initializing Servlet 'dispatcherServlet'
+20-03-2023 21:26:26.152 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet.initServletBean - Completed initialization in 18 ms
+20-03-2023 21:26:42.773 [docker-java-stream-781465761] ERROR c.g.d.a.async.ResultCallbackTemplate.onError - Error during callback
+com.github.dockerjava.api.exception.InternalServerErrorException: Status 500: Get "https://registry-1.docker.io/v2/library/postgres/tags/list": unauthorized: incorrect username or password
+	at com.github.dockerjava.jaxrs.filter.ResponseStatusExceptionFilter.filter(ResponseStatusExceptionFilter.java:68)
+	at org.glassfish.jersey.client.ClientFilteringStages$ResponseFilterStage.apply(ClientFilteringStages.java:171)
+	at org.glassfish.jersey.client.ClientFilteringStages$ResponseFilterStage.apply(ClientFilteringStages.java:159)
+	at org.glassfish.jersey.process.internal.Stages.process(Stages.java:147)
+	at org.glassfish.jersey.client.ClientRuntime.invoke(ClientRuntime.java:301)
+	at org.glassfish.jersey.client.JerseyInvocation.lambda$invoke$0(JerseyInvocation.java:609)
+	at org.glassfish.jersey.internal.Errors.process(Errors.java:292)
+	at org.glassfish.jersey.internal.Errors.process(Errors.java:274)
+	at org.glassfish.jersey.internal.Errors.process(Errors.java:205)
+	at org.glassfish.jersey.process.internal.RequestScope.runInScope(RequestScope.java:390)
+	at org.glassfish.jersey.client.JerseyInvocation.invoke(JerseyInvocation.java:608)
+	at com.github.dockerjava.jaxrs.JerseyDockerHttpClient.execute(JerseyDockerHttpClient.java:297)
+	at com.github.dockerjava.core.DefaultInvocationBuilder.execute(DefaultInvocationBuilder.java:228)
+	at com.github.dockerjava.core.DefaultInvocationBuilder.lambda$executeAndStream$1(DefaultInvocationBuilder.java:269)
+	at java.lang.Thread.run(Thread.java:750)
+20-03-2023 21:27:58.759 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.destroy - Closing JPA EntityManagerFactory for persistence unit 'default'
+20-03-2023 21:27:58.778 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown initiated...
+20-03-2023 21:27:58.877 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown completed.
+20-03-2023 21:28:06.266 [main] INFO  m.p.s.DotenvPropertySource.addToEnvironment - Initializing Dotenv with DotenvConfig{directory=null, filename=null, ignoreIfMalformed=false, ignoreIfMissing=true, systemProperties=false, prefix=null}
+20-03-2023 21:28:06.317 [main] INFO  ai.openfabric.api.Application.logStarting - Starting Application using Java 1.8.0_352 on macs-MacBook-Air-9.local with PID 39180 (/Users/dec/Downloads/openfabric-test/openfabric-api/build/classes/java/main started by dec in /Users/dec/Downloads/openfabric-test)
+20-03-2023 21:28:06.318 [main] INFO  ai.openfabric.api.Application.logStartupProfileInfo - The following 2 profiles are active: "base", "local"
+20-03-2023 21:28:07.954 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+20-03-2023 21:28:08.052 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Finished Spring Data repository scanning in 84 ms. Found 1 JPA repository interfaces.
+20-03-2023 21:28:09.372 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer.initialize - Tomcat initialized with port(s): 8080 (http)
+20-03-2023 21:28:09.386 [main] INFO  o.a.coyote.http11.Http11NioProtocol.log - Initializing ProtocolHandler ["http-nio-8080"]
+20-03-2023 21:28:09.386 [main] INFO  o.a.catalina.core.StandardService.log - Starting service [Tomcat]
+20-03-2023 21:28:09.387 [main] INFO  o.a.catalina.core.StandardEngine.log - Starting Servlet engine: [Apache Tomcat/9.0.68]
+20-03-2023 21:28:09.548 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring embedded WebApplicationContext
+20-03-2023 21:28:09.548 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext.prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 3099 ms
+20-03-2023 21:28:09.996 [main] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Starting...
+20-03-2023 21:28:10.096 [main] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Start completed.
+20-03-2023 21:28:10.287 [main] INFO  liquibase.database.log - Set default schema name to public
+20-03-2023 21:28:10.405 [main] INFO  liquibase.lockservice.log - Successfully acquired change log lock
+20-03-2023 21:28:10.884 [main] INFO  liquibase.changelog.log - Reading from public.databasechangelog
+20-03-2023 21:28:10.945 [main] INFO  liquibase.lockservice.log - Successfully released change log lock
+20-03-2023 21:28:11.116 [main] INFO  o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [name: default]
+20-03-2023 21:28:11.174 [main] INFO  org.hibernate.Version.logVersion - HHH000412: Hibernate ORM core version 5.6.12.Final
+20-03-2023 21:28:11.421 [main] INFO  o.h.annotations.common.Version.<clinit> - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+20-03-2023 21:28:11.634 [main] INFO  org.hibernate.dialect.Dialect.<init> - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+20-03-2023 21:28:12.355 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator.initiateService - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+20-03-2023 21:28:12.369 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory - Initialized JPA EntityManagerFactory for persistence unit 'default'
+20-03-2023 21:28:12.434 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration.openEntityManagerInViewInterceptor - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+20-03-2023 21:28:14.070 [main] WARN  c.g.d.core.DockerClientBuilder.build - 'dockerHttpClient' should be set.Falling back to Jersey, will be an error in future releases.
+20-03-2023 21:28:19.364 [main] INFO  com.yahoo.elide.Elide.registerCustomSerde - Registering serde for type : class java.time.OffsetDateTime
+20-03-2023 21:28:19.365 [main] INFO  com.yahoo.elide.Elide.registerCustomSerde - Registering serde for type : class java.time.Instant
+20-03-2023 21:28:19.705 [main] WARN  o.s.b.a.s.s.UserDetailsServiceAutoConfiguration.getOrDeducePassword - 
+
+Using generated security password: db513c88-d134-46cc-9468-923391ab4194
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+20-03-2023 21:28:19.856 [main] INFO  o.s.s.web.DefaultSecurityFilterChain.<init> - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@18ff753c, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@2ff62720, org.springframework.security.web.context.SecurityContextPersistenceFilter@23d12a3a, org.springframework.security.web.header.HeaderWriterFilter@4fce3ed7, org.springframework.web.filter.CorsFilter@2a334bac, org.springframework.security.web.authentication.logout.LogoutFilter@65f470f8, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@64a7ad02, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@467cd4b9, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@45295cfd, org.springframework.security.web.session.SessionManagementFilter@4b9beefe, org.springframework.security.web.access.ExceptionTranslationFilter@42c55978, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@5b6f3d0b]
+20-03-2023 21:28:20.237 [main] WARN  o.s.b.a.t.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration.checkTemplateLocationExists - Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+20-03-2023 21:28:20.365 [main] INFO  o.a.coyote.http11.Http11NioProtocol.log - Starting ProtocolHandler ["http-nio-8080"]
+20-03-2023 21:28:20.397 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer.start - Tomcat started on port(s): 8080 (http) with context path ''
+20-03-2023 21:28:20.905 [main] INFO  ai.openfabric.api.Application.logStarted - Started Application in 15.324 seconds (JVM running for 17.049)
+20-03-2023 21:28:42.170 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring DispatcherServlet 'dispatcherServlet'
+20-03-2023 21:28:42.175 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet.initServletBean - Initializing Servlet 'dispatcherServlet'
+20-03-2023 21:28:42.197 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet.initServletBean - Completed initialization in 20 ms
+20-03-2023 21:30:23.462 [docker-java-stream-948299385] ERROR c.g.d.a.async.ResultCallbackTemplate.onError - Error during callback
+org.apache.http.ConnectionClosedException: Premature end of chunk coded message body: closing chunk expected
+	at org.apache.http.impl.io.ChunkedInputStream.getChunkSize(ChunkedInputStream.java:263)
+	at org.apache.http.impl.io.ChunkedInputStream.nextChunk(ChunkedInputStream.java:222)
+	at org.apache.http.impl.io.ChunkedInputStream.read(ChunkedInputStream.java:183)
+	at org.apache.http.conn.EofSensorInputStream.read(EofSensorInputStream.java:135)
+	at java.io.BufferedInputStream.fill(BufferedInputStream.java:246)
+	at java.io.BufferedInputStream.read1(BufferedInputStream.java:286)
+	at java.io.BufferedInputStream.read(BufferedInputStream.java:345)
+	at java.io.FilterInputStream.read(FilterInputStream.java:133)
+	at org.glassfish.jersey.message.internal.EntityInputStream.read(EntityInputStream.java:79)
+	at com.fasterxml.jackson.core.json.UTF8StreamJsonParser._loadMore(UTF8StreamJsonParser.java:257)
+	at com.fasterxml.jackson.core.json.UTF8StreamJsonParser._skipWSOrEnd2(UTF8StreamJsonParser.java:3086)
+	at com.fasterxml.jackson.core.json.UTF8StreamJsonParser._skipWSOrEnd(UTF8StreamJsonParser.java:3081)
+	at com.fasterxml.jackson.core.json.UTF8StreamJsonParser.nextToken(UTF8StreamJsonParser.java:756)
+	at com.fasterxml.jackson.databind.MappingIterator.hasNextValue(MappingIterator.java:246)
+	at com.github.dockerjava.core.DefaultInvocationBuilder$JsonSink.accept(DefaultInvocationBuilder.java:314)
+	at com.github.dockerjava.core.DefaultInvocationBuilder$JsonSink.accept(DefaultInvocationBuilder.java:298)
+	at com.github.dockerjava.core.DefaultInvocationBuilder.lambda$executeAndStream$1(DefaultInvocationBuilder.java:275)
+	at java.lang.Thread.run(Thread.java:750)
+20-03-2023 21:30:23.469 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.destroy - Closing JPA EntityManagerFactory for persistence unit 'default'
+20-03-2023 21:30:23.553 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown initiated...
+20-03-2023 21:30:23.612 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown completed.
+20-03-2023 21:30:34.533 [main] INFO  m.p.s.DotenvPropertySource.addToEnvironment - Initializing Dotenv with DotenvConfig{directory=null, filename=null, ignoreIfMalformed=false, ignoreIfMissing=true, systemProperties=false, prefix=null}
+20-03-2023 21:30:34.579 [main] INFO  ai.openfabric.api.Application.logStarting - Starting Application using Java 1.8.0_352 on macs-MacBook-Air-9.local with PID 39418 (/Users/dec/Downloads/openfabric-test/openfabric-api/build/classes/java/main started by dec in /Users/dec/Downloads/openfabric-test)
+20-03-2023 21:30:34.580 [main] INFO  ai.openfabric.api.Application.logStartupProfileInfo - The following 2 profiles are active: "base", "local"
+20-03-2023 21:30:36.298 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+20-03-2023 21:30:36.396 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Finished Spring Data repository scanning in 83 ms. Found 1 JPA repository interfaces.
+20-03-2023 21:30:37.597 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer.initialize - Tomcat initialized with port(s): 8080 (http)
+20-03-2023 21:30:37.629 [main] INFO  o.a.coyote.http11.Http11NioProtocol.log - Initializing ProtocolHandler ["http-nio-8080"]
+20-03-2023 21:30:37.630 [main] INFO  o.a.catalina.core.StandardService.log - Starting service [Tomcat]
+20-03-2023 21:30:37.631 [main] INFO  o.a.catalina.core.StandardEngine.log - Starting Servlet engine: [Apache Tomcat/9.0.68]
+20-03-2023 21:30:37.960 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring embedded WebApplicationContext
+20-03-2023 21:30:37.961 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext.prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 3262 ms
+20-03-2023 21:30:38.368 [main] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Starting...
+20-03-2023 21:30:38.746 [main] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Start completed.
+20-03-2023 21:30:40.018 [main] INFO  liquibase.database.log - Set default schema name to public
+20-03-2023 21:30:40.154 [main] INFO  liquibase.lockservice.log - Successfully acquired change log lock
+20-03-2023 21:30:40.634 [main] INFO  liquibase.changelog.log - Reading from public.databasechangelog
+20-03-2023 21:30:40.697 [main] INFO  liquibase.lockservice.log - Successfully released change log lock
+20-03-2023 21:30:40.880 [main] INFO  o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [name: default]
+20-03-2023 21:30:40.946 [main] INFO  org.hibernate.Version.logVersion - HHH000412: Hibernate ORM core version 5.6.12.Final
+20-03-2023 21:30:41.198 [main] INFO  o.h.annotations.common.Version.<clinit> - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+20-03-2023 21:30:41.379 [main] INFO  org.hibernate.dialect.Dialect.<init> - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+20-03-2023 21:30:42.128 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator.initiateService - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+20-03-2023 21:30:42.143 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory - Initialized JPA EntityManagerFactory for persistence unit 'default'
+20-03-2023 21:30:42.193 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration.openEntityManagerInViewInterceptor - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+20-03-2023 21:30:50.288 [main] INFO  com.yahoo.elide.Elide.registerCustomSerde - Registering serde for type : class java.time.OffsetDateTime
+20-03-2023 21:30:50.291 [main] INFO  com.yahoo.elide.Elide.registerCustomSerde - Registering serde for type : class java.time.Instant
+20-03-2023 21:30:50.749 [main] WARN  o.s.b.a.s.s.UserDetailsServiceAutoConfiguration.getOrDeducePassword - 
+
+Using generated security password: 5f9dc942-77cf-4da2-b773-2124d0be6330
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+20-03-2023 21:30:50.980 [main] INFO  o.s.s.web.DefaultSecurityFilterChain.<init> - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@320ba79f, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@333a2df2, org.springframework.security.web.context.SecurityContextPersistenceFilter@7acb5200, org.springframework.security.web.header.HeaderWriterFilter@5f9ccd0c, org.springframework.web.filter.CorsFilter@50448409, org.springframework.security.web.authentication.logout.LogoutFilter@5acd7d1c, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@3661b732, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@ae74eef, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@5ffdd510, org.springframework.security.web.session.SessionManagementFilter@24f5e9e8, org.springframework.security.web.access.ExceptionTranslationFilter@603b9d4b, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@3605ab16]
+20-03-2023 21:30:51.469 [main] WARN  o.s.b.a.t.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration.checkTemplateLocationExists - Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+20-03-2023 21:30:51.578 [main] INFO  o.a.coyote.http11.Http11NioProtocol.log - Starting ProtocolHandler ["http-nio-8080"]
+20-03-2023 21:30:51.609 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer.start - Tomcat started on port(s): 8080 (http) with context path ''
+20-03-2023 21:30:52.114 [main] INFO  ai.openfabric.api.Application.logStarted - Started Application in 18.336 seconds (JVM running for 20.793)
+20-03-2023 21:30:58.814 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring DispatcherServlet 'dispatcherServlet'
+20-03-2023 21:30:58.815 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet.initServletBean - Initializing Servlet 'dispatcherServlet'
+20-03-2023 21:30:58.831 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet.initServletBean - Completed initialization in 15 ms
+20-03-2023 21:30:59.531 [http-nio-8080-exec-1] WARN  c.g.d.core.DockerClientBuilder.build - 'dockerHttpClient' should be set.Falling back to Jersey, will be an error in future releases.
+20-03-2023 21:31:00.064 [http-nio-8080-exec-1] WARN  c.g.d.core.DockerClientBuilder.build - 'dockerHttpClient' should be set.Falling back to Jersey, will be an error in future releases.
+20-03-2023 21:31:35.361 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.destroy - Closing JPA EntityManagerFactory for persistence unit 'default'
+20-03-2023 21:31:35.429 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown initiated...
+20-03-2023 21:31:36.802 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown completed.
+20-03-2023 21:31:50.000 [main] INFO  m.p.s.DotenvPropertySource.addToEnvironment - Initializing Dotenv with DotenvConfig{directory=null, filename=null, ignoreIfMalformed=false, ignoreIfMissing=true, systemProperties=false, prefix=null}
+20-03-2023 21:31:50.046 [main] INFO  ai.openfabric.api.Application.logStarting - Starting Application using Java 1.8.0_352 on macs-MacBook-Air-9.local with PID 39576 (/Users/dec/Downloads/openfabric-test/openfabric-api/build/classes/java/main started by dec in /Users/dec/Downloads/openfabric-test)
+20-03-2023 21:31:50.047 [main] INFO  ai.openfabric.api.Application.logStartupProfileInfo - The following 2 profiles are active: "base", "local"
+20-03-2023 21:31:51.888 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+20-03-2023 21:31:51.987 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Finished Spring Data repository scanning in 85 ms. Found 1 JPA repository interfaces.
+20-03-2023 21:31:53.503 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer.initialize - Tomcat initialized with port(s): 8080 (http)
+20-03-2023 21:31:53.516 [main] INFO  o.a.coyote.http11.Http11NioProtocol.log - Initializing ProtocolHandler ["http-nio-8080"]
+20-03-2023 21:31:53.516 [main] INFO  o.a.catalina.core.StandardService.log - Starting service [Tomcat]
+20-03-2023 21:31:53.517 [main] INFO  o.a.catalina.core.StandardEngine.log - Starting Servlet engine: [Apache Tomcat/9.0.68]
+20-03-2023 21:31:53.683 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring embedded WebApplicationContext
+20-03-2023 21:31:53.683 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext.prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 3513 ms
+20-03-2023 21:31:54.265 [main] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Starting...
+20-03-2023 21:31:54.404 [main] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Start completed.
+20-03-2023 21:31:54.661 [main] INFO  liquibase.database.log - Set default schema name to public
+20-03-2023 21:31:54.754 [main] INFO  liquibase.lockservice.log - Successfully acquired change log lock
+20-03-2023 21:31:55.266 [main] INFO  liquibase.changelog.log - Reading from public.databasechangelog
+20-03-2023 21:31:55.329 [main] INFO  liquibase.lockservice.log - Successfully released change log lock
+20-03-2023 21:31:55.502 [main] INFO  o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [name: default]
+20-03-2023 21:31:55.595 [main] INFO  org.hibernate.Version.logVersion - HHH000412: Hibernate ORM core version 5.6.12.Final
+20-03-2023 21:31:55.937 [main] INFO  o.h.annotations.common.Version.<clinit> - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+20-03-2023 21:31:56.165 [main] INFO  org.hibernate.dialect.Dialect.<init> - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+20-03-2023 21:31:57.108 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator.initiateService - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+20-03-2023 21:31:57.129 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory - Initialized JPA EntityManagerFactory for persistence unit 'default'
+20-03-2023 21:31:57.296 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration.openEntityManagerInViewInterceptor - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+20-03-2023 21:32:04.018 [main] INFO  com.yahoo.elide.Elide.registerCustomSerde - Registering serde for type : class java.time.Instant
+20-03-2023 21:32:04.019 [main] INFO  com.yahoo.elide.Elide.registerCustomSerde - Registering serde for type : class java.time.OffsetDateTime
+20-03-2023 21:32:04.482 [main] WARN  o.s.b.a.s.s.UserDetailsServiceAutoConfiguration.getOrDeducePassword - 
+
+Using generated security password: e6e7b545-6fe0-4f2e-ad80-348d5191b26a
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+20-03-2023 21:32:04.633 [main] INFO  o.s.s.web.DefaultSecurityFilterChain.<init> - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@333a2df2, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5ffdd510, org.springframework.security.web.context.SecurityContextPersistenceFilter@3d50a3d9, org.springframework.security.web.header.HeaderWriterFilter@6738e8b2, org.springframework.web.filter.CorsFilter@50448409, org.springframework.security.web.authentication.logout.LogoutFilter@6b52a40, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5111f814, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@2553dcc0, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@8c18bde, org.springframework.security.web.session.SessionManagementFilter@50e6ee24, org.springframework.security.web.access.ExceptionTranslationFilter@42cf5a6f, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@30cb223b]
+20-03-2023 21:32:05.041 [main] WARN  o.s.b.a.t.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration.checkTemplateLocationExists - Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+20-03-2023 21:32:05.154 [main] INFO  o.a.coyote.http11.Http11NioProtocol.log - Starting ProtocolHandler ["http-nio-8080"]
+20-03-2023 21:32:05.188 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer.start - Tomcat started on port(s): 8080 (http) with context path ''
+20-03-2023 21:32:05.771 [main] INFO  ai.openfabric.api.Application.logStarted - Started Application in 16.404 seconds (JVM running for 18.963)
+20-03-2023 21:32:10.152 [http-nio-8080-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring DispatcherServlet 'dispatcherServlet'
+20-03-2023 21:32:10.160 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet.initServletBean - Initializing Servlet 'dispatcherServlet'
+20-03-2023 21:32:10.166 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet.initServletBean - Completed initialization in 4 ms
+20-03-2023 21:32:11.371 [http-nio-8080-exec-2] WARN  c.g.d.core.DockerClientBuilder.build - 'dockerHttpClient' should be set.Falling back to Jersey, will be an error in future releases.
+20-03-2023 21:32:11.844 [http-nio-8080-exec-2] WARN  c.g.d.core.DockerClientBuilder.build - 'dockerHttpClient' should be set.Falling back to Jersey, will be an error in future releases.
+20-03-2023 21:32:36.763 [http-nio-8080-exec-1] WARN  c.g.d.core.DockerClientBuilder.build - 'dockerHttpClient' should be set.Falling back to Jersey, will be an error in future releases.
+20-03-2023 21:32:36.792 [http-nio-8080-exec-1] WARN  c.g.d.core.DockerClientBuilder.build - 'dockerHttpClient' should be set.Falling back to Jersey, will be an error in future releases.
+20-03-2023 21:32:37.146 [http-nio-8080-exec-1] WARN  c.g.d.core.DockerClientBuilder.build - 'dockerHttpClient' should be set.Falling back to Jersey, will be an error in future releases.
+20-03-2023 21:32:42.139 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL.logStatement - insert into public.worker (created_at, deleted_at, updated_at, image_id, image_name, port, status, worker_create_at, worker_name, id) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+20-03-2023 21:32:42.229 [http-nio-8080-exec-1] WARN  o.h.e.jdbc.spi.SqlExceptionHelper.logExceptions - SQL Error: 0, SQLState: 42703
+20-03-2023 21:32:42.234 [http-nio-8080-exec-1] ERROR o.h.e.jdbc.spi.SqlExceptionHelper.logExceptions - ERROR: column "image_id" of relation "worker" does not exist
+  Position: 64
+20-03-2023 21:32:42.253 [http-nio-8080-exec-1] INFO  o.h.e.j.b.internal.AbstractBatchImpl.release - HHH000010: On release of batch it still contained JDBC statements
+20-03-2023 21:33:39.769 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.destroy - Closing JPA EntityManagerFactory for persistence unit 'default'
+20-03-2023 21:33:39.821 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown initiated...
+20-03-2023 21:33:39.958 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown completed.
+20-03-2023 21:34:16.397 [main] INFO  m.p.s.DotenvPropertySource.addToEnvironment - Initializing Dotenv with DotenvConfig{directory=null, filename=null, ignoreIfMalformed=false, ignoreIfMissing=true, systemProperties=false, prefix=null}
+20-03-2023 21:34:16.461 [main] INFO  ai.openfabric.api.Application.logStarting - Starting Application using Java 1.8.0_352 on macs-MacBook-Air-9.local with PID 39820 (/Users/dec/Downloads/openfabric-test/openfabric-api/build/classes/java/main started by dec in /Users/dec/Downloads/openfabric-test)
+20-03-2023 21:34:16.463 [main] INFO  ai.openfabric.api.Application.logStartupProfileInfo - The following 2 profiles are active: "base", "local"
+20-03-2023 21:34:18.270 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+20-03-2023 21:34:18.365 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Finished Spring Data repository scanning in 84 ms. Found 1 JPA repository interfaces.
+20-03-2023 21:34:19.713 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer.initialize - Tomcat initialized with port(s): 8080 (http)
+20-03-2023 21:34:19.726 [main] INFO  o.a.coyote.http11.Http11NioProtocol.log - Initializing ProtocolHandler ["http-nio-8080"]
+20-03-2023 21:34:19.727 [main] INFO  o.a.catalina.core.StandardService.log - Starting service [Tomcat]
+20-03-2023 21:34:19.727 [main] INFO  o.a.catalina.core.StandardEngine.log - Starting Servlet engine: [Apache Tomcat/9.0.68]
+20-03-2023 21:34:19.890 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring embedded WebApplicationContext
+20-03-2023 21:34:19.891 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext.prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 3282 ms
+20-03-2023 21:34:20.314 [main] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Starting...
+20-03-2023 21:34:20.448 [main] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Start completed.
+20-03-2023 21:34:20.727 [main] INFO  liquibase.database.log - Set default schema name to public
+20-03-2023 21:34:20.866 [main] INFO  liquibase.lockservice.log - Successfully acquired change log lock
+20-03-2023 21:34:21.409 [main] INFO  liquibase.changelog.log - Reading from public.databasechangelog
+20-03-2023 21:34:21.490 [main] INFO  liquibase.lockservice.log - Successfully released change log lock
+20-03-2023 21:34:21.690 [main] INFO  o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [name: default]
+20-03-2023 21:34:21.751 [main] INFO  org.hibernate.Version.logVersion - HHH000412: Hibernate ORM core version 5.6.12.Final
+20-03-2023 21:34:22.053 [main] INFO  o.h.annotations.common.Version.<clinit> - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+20-03-2023 21:34:22.296 [main] INFO  org.hibernate.dialect.Dialect.<init> - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+20-03-2023 21:34:23.082 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator.initiateService - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+20-03-2023 21:34:23.097 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory - Initialized JPA EntityManagerFactory for persistence unit 'default'
+20-03-2023 21:34:23.163 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration.openEntityManagerInViewInterceptor - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+20-03-2023 21:34:25.178 [main] WARN  c.g.d.core.DockerClientBuilder.build - 'dockerHttpClient' should be set.Falling back to Jersey, will be an error in future releases.
+20-03-2023 21:34:31.309 [main] INFO  com.yahoo.elide.Elide.registerCustomSerde - Registering serde for type : class java.time.Instant
+20-03-2023 21:34:31.312 [main] INFO  com.yahoo.elide.Elide.registerCustomSerde - Registering serde for type : class java.time.OffsetDateTime
+20-03-2023 21:34:31.676 [main] WARN  o.s.b.a.s.s.UserDetailsServiceAutoConfiguration.getOrDeducePassword - 
+
+Using generated security password: d06ea982-7e79-4339-984f-aede2c11df1d
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+20-03-2023 21:34:31.874 [main] INFO  o.s.s.web.DefaultSecurityFilterChain.<init> - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@42c9b1ee, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@217c6a1e, org.springframework.security.web.context.SecurityContextPersistenceFilter@46590dd0, org.springframework.security.web.header.HeaderWriterFilter@2d9df336, org.springframework.web.filter.CorsFilter@2a334bac, org.springframework.security.web.authentication.logout.LogoutFilter@77226121, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@66a93b25, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@2a341e3d, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@3fad8636, org.springframework.security.web.session.SessionManagementFilter@70df41f9, org.springframework.security.web.access.ExceptionTranslationFilter@2728add3, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@c0521e5]
+20-03-2023 21:34:32.364 [main] WARN  o.s.b.a.t.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration.checkTemplateLocationExists - Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+20-03-2023 21:34:32.475 [main] INFO  o.a.coyote.http11.Http11NioProtocol.log - Starting ProtocolHandler ["http-nio-8080"]
+20-03-2023 21:34:32.505 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer.start - Tomcat started on port(s): 8080 (http) with context path ''
+20-03-2023 21:34:32.972 [main] INFO  ai.openfabric.api.Application.logStarted - Started Application in 17.547 seconds (JVM running for 22.438)
+20-03-2023 21:34:38.540 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring DispatcherServlet 'dispatcherServlet'
+20-03-2023 21:34:38.545 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet.initServletBean - Initializing Servlet 'dispatcherServlet'
+20-03-2023 21:34:38.550 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet.initServletBean - Completed initialization in 5 ms
+20-03-2023 21:34:55.858 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.destroy - Closing JPA EntityManagerFactory for persistence unit 'default'
+20-03-2023 21:34:55.857 [docker-java-stream-948299385] ERROR c.g.d.a.async.ResultCallbackTemplate.onError - Error during callback
+org.apache.http.ConnectionClosedException: Premature end of chunk coded message body: closing chunk expected
+	at org.apache.http.impl.io.ChunkedInputStream.getChunkSize(ChunkedInputStream.java:263)
+	at org.apache.http.impl.io.ChunkedInputStream.nextChunk(ChunkedInputStream.java:222)
+	at org.apache.http.impl.io.ChunkedInputStream.read(ChunkedInputStream.java:183)
+	at org.apache.http.conn.EofSensorInputStream.read(EofSensorInputStream.java:135)
+	at java.io.BufferedInputStream.fill(BufferedInputStream.java:246)
+	at java.io.BufferedInputStream.read1(BufferedInputStream.java:286)
+	at java.io.BufferedInputStream.read(BufferedInputStream.java:345)
+	at java.io.FilterInputStream.read(FilterInputStream.java:133)
+	at org.glassfish.jersey.message.internal.EntityInputStream.read(EntityInputStream.java:79)
+	at com.fasterxml.jackson.core.json.UTF8StreamJsonParser._loadMore(UTF8StreamJsonParser.java:257)
+	at com.fasterxml.jackson.core.json.UTF8StreamJsonParser._skipWSOrEnd2(UTF8StreamJsonParser.java:3086)
+	at com.fasterxml.jackson.core.json.UTF8StreamJsonParser._skipWSOrEnd(UTF8StreamJsonParser.java:3081)
+	at com.fasterxml.jackson.core.json.UTF8StreamJsonParser.nextToken(UTF8StreamJsonParser.java:756)
+	at com.fasterxml.jackson.databind.MappingIterator.hasNextValue(MappingIterator.java:246)
+	at com.github.dockerjava.core.DefaultInvocationBuilder$JsonSink.accept(DefaultInvocationBuilder.java:314)
+	at com.github.dockerjava.core.DefaultInvocationBuilder$JsonSink.accept(DefaultInvocationBuilder.java:298)
+	at com.github.dockerjava.core.DefaultInvocationBuilder.lambda$executeAndStream$1(DefaultInvocationBuilder.java:275)
+	at java.lang.Thread.run(Thread.java:750)
+20-03-2023 21:34:55.874 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown initiated...
+20-03-2023 21:34:55.886 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown completed.
+20-03-2023 21:40:51.369 [main] INFO  m.p.s.DotenvPropertySource.addToEnvironment - Initializing Dotenv with DotenvConfig{directory=null, filename=null, ignoreIfMalformed=false, ignoreIfMissing=true, systemProperties=false, prefix=null}
+20-03-2023 21:40:51.431 [main] INFO  ai.openfabric.api.Application.logStarting - Starting Application using Java 1.8.0_352 on macs-MacBook-Air-9.local with PID 40459 (/Users/dec/Downloads/openfabric-test/openfabric-api/build/classes/java/main started by dec in /Users/dec/Downloads/openfabric-test)
+20-03-2023 21:40:51.433 [main] INFO  ai.openfabric.api.Application.logStartupProfileInfo - The following 2 profiles are active: "base", "local"
+20-03-2023 21:40:53.630 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+20-03-2023 21:40:53.736 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Finished Spring Data repository scanning in 93 ms. Found 1 JPA repository interfaces.
+20-03-2023 21:40:55.669 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer.initialize - Tomcat initialized with port(s): 8080 (http)
+20-03-2023 21:40:55.686 [main] INFO  o.a.coyote.http11.Http11NioProtocol.log - Initializing ProtocolHandler ["http-nio-8080"]
+20-03-2023 21:40:55.687 [main] INFO  o.a.catalina.core.StandardService.log - Starting service [Tomcat]
+20-03-2023 21:40:55.687 [main] INFO  o.a.catalina.core.StandardEngine.log - Starting Servlet engine: [Apache Tomcat/9.0.68]
+20-03-2023 21:40:55.904 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring embedded WebApplicationContext
+20-03-2023 21:40:55.905 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext.prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 4355 ms
+20-03-2023 21:40:56.457 [main] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Starting...
+20-03-2023 21:40:56.670 [main] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Start completed.
+20-03-2023 21:40:56.955 [main] INFO  liquibase.database.log - Set default schema name to public
+20-03-2023 21:40:57.100 [main] INFO  liquibase.lockservice.log - Successfully acquired change log lock
+20-03-2023 21:40:57.669 [main] INFO  liquibase.changelog.log - Reading from public.databasechangelog
+20-03-2023 21:40:57.753 [main] INFO  liquibase.lockservice.log - Successfully released change log lock
+20-03-2023 21:40:58.000 [main] INFO  o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [name: default]
+20-03-2023 21:40:58.107 [main] INFO  org.hibernate.Version.logVersion - HHH000412: Hibernate ORM core version 5.6.12.Final
+20-03-2023 21:40:58.833 [main] INFO  o.h.annotations.common.Version.<clinit> - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+20-03-2023 21:40:59.365 [main] INFO  org.hibernate.dialect.Dialect.<init> - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+20-03-2023 21:41:00.789 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator.initiateService - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+20-03-2023 21:41:00.810 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory - Initialized JPA EntityManagerFactory for persistence unit 'default'
+20-03-2023 21:41:00.829 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext.refresh - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dockerConfig': Injection of autowired dependencies failed; nested exception is java.lang.IllegalArgumentException: Could not resolve placeholder 'env.DOCKER_PASSWROD' in value "${env.DOCKER_PASSWROD}"
+20-03-2023 21:41:00.830 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.destroy - Closing JPA EntityManagerFactory for persistence unit 'default'
+20-03-2023 21:41:00.832 [main] INFO  com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown initiated...
+20-03-2023 21:41:00.846 [main] INFO  com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown completed.
+20-03-2023 21:41:00.849 [main] INFO  o.a.catalina.core.StandardService.log - Stopping service [Tomcat]
+20-03-2023 21:41:00.871 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener.logMessage - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+20-03-2023 21:41:00.950 [main] ERROR o.s.boot.SpringApplication.reportFailure - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dockerConfig': Injection of autowired dependencies failed; nested exception is java.lang.IllegalArgumentException: Could not resolve placeholder 'env.DOCKER_PASSWROD' in value "${env.DOCKER_PASSWROD}"
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:405)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1431)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:619)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:955)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:734)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295)
+	at ai.openfabric.api.Application.main(Application.java:13)
+Caused by: java.lang.IllegalArgumentException: Could not resolve placeholder 'env.DOCKER_PASSWROD' in value "${env.DOCKER_PASSWROD}"
+	at org.springframework.util.PropertyPlaceholderHelper.parseStringValue(PropertyPlaceholderHelper.java:180)
+	at org.springframework.util.PropertyPlaceholderHelper.replacePlaceholders(PropertyPlaceholderHelper.java:126)
+	at org.springframework.core.env.AbstractPropertyResolver.doResolvePlaceholders(AbstractPropertyResolver.java:239)
+	at org.springframework.core.env.AbstractPropertyResolver.resolveRequiredPlaceholders(AbstractPropertyResolver.java:210)
+	at org.springframework.core.env.AbstractPropertyResolver.resolveNestedPlaceholders(AbstractPropertyResolver.java:230)
+	at org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertyResolver.getProperty(ConfigurationPropertySourcesPropertyResolver.java:79)
+	at org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertyResolver.getProperty(ConfigurationPropertySourcesPropertyResolver.java:60)
+	at org.springframework.core.env.AbstractEnvironment.getProperty(AbstractEnvironment.java:594)
+	at org.springframework.context.support.PropertySourcesPlaceholderConfigurer$1.getProperty(PropertySourcesPlaceholderConfigurer.java:153)
+	at org.springframework.context.support.PropertySourcesPlaceholderConfigurer$1.getProperty(PropertySourcesPlaceholderConfigurer.java:149)
+	at org.springframework.core.env.PropertySourcesPropertyResolver.getProperty(PropertySourcesPropertyResolver.java:85)
+	at org.springframework.core.env.PropertySourcesPropertyResolver.getPropertyAsRawString(PropertySourcesPropertyResolver.java:74)
+	at org.springframework.util.PropertyPlaceholderHelper.parseStringValue(PropertyPlaceholderHelper.java:153)
+	at org.springframework.util.PropertyPlaceholderHelper.replacePlaceholders(PropertyPlaceholderHelper.java:126)
+	at org.springframework.core.env.AbstractPropertyResolver.doResolvePlaceholders(AbstractPropertyResolver.java:239)
+	at org.springframework.core.env.AbstractPropertyResolver.resolveRequiredPlaceholders(AbstractPropertyResolver.java:210)
+	at org.springframework.context.support.PropertySourcesPlaceholderConfigurer.lambda$processProperties$0(PropertySourcesPlaceholderConfigurer.java:191)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.resolveEmbeddedValue(AbstractBeanFactory.java:936)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1332)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1311)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:656)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:639)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:119)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:399)
+	... 17 common frames omitted
+20-03-2023 21:41:58.158 [main] INFO  m.p.s.DotenvPropertySource.addToEnvironment - Initializing Dotenv with DotenvConfig{directory=null, filename=null, ignoreIfMalformed=false, ignoreIfMissing=true, systemProperties=false, prefix=null}
+20-03-2023 21:41:58.212 [main] INFO  ai.openfabric.api.Application.logStarting - Starting Application using Java 1.8.0_352 on macs-MacBook-Air-9.local with PID 40581 (/Users/dec/Downloads/openfabric-test/openfabric-api/build/classes/java/main started by dec in /Users/dec/Downloads/openfabric-test)
+20-03-2023 21:41:58.215 [main] INFO  ai.openfabric.api.Application.logStartupProfileInfo - The following 2 profiles are active: "base", "local"
+20-03-2023 21:42:01.026 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+20-03-2023 21:42:01.129 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Finished Spring Data repository scanning in 86 ms. Found 1 JPA repository interfaces.
+20-03-2023 21:42:02.557 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer.initialize - Tomcat initialized with port(s): 8080 (http)
+20-03-2023 21:42:02.574 [main] INFO  o.a.coyote.http11.Http11NioProtocol.log - Initializing ProtocolHandler ["http-nio-8080"]
+20-03-2023 21:42:02.575 [main] INFO  o.a.catalina.core.StandardService.log - Starting service [Tomcat]
+20-03-2023 21:42:02.575 [main] INFO  o.a.catalina.core.StandardEngine.log - Starting Servlet engine: [Apache Tomcat/9.0.68]
+20-03-2023 21:42:02.889 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring embedded WebApplicationContext
+20-03-2023 21:42:02.890 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext.prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 4526 ms
+20-03-2023 21:42:03.305 [main] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Starting...
+20-03-2023 21:42:03.441 [main] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Start completed.
+20-03-2023 21:42:03.669 [main] INFO  liquibase.database.log - Set default schema name to public
+20-03-2023 21:42:03.763 [main] INFO  liquibase.lockservice.log - Successfully acquired change log lock
+20-03-2023 21:42:04.365 [main] INFO  liquibase.changelog.log - Reading from public.databasechangelog
+20-03-2023 21:42:04.428 [main] INFO  liquibase.lockservice.log - Successfully released change log lock
+20-03-2023 21:42:04.655 [main] INFO  o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [name: default]
+20-03-2023 21:42:04.756 [main] INFO  org.hibernate.Version.logVersion - HHH000412: Hibernate ORM core version 5.6.12.Final
+20-03-2023 21:42:05.170 [main] INFO  o.h.annotations.common.Version.<clinit> - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+20-03-2023 21:42:05.440 [main] INFO  org.hibernate.dialect.Dialect.<init> - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+20-03-2023 21:42:06.932 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator.initiateService - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+20-03-2023 21:42:06.977 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory - Initialized JPA EntityManagerFactory for persistence unit 'default'
+20-03-2023 21:42:07.027 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext.refresh - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dockerConfig': Injection of autowired dependencies failed; nested exception is java.lang.IllegalArgumentException: Could not resolve placeholder 'env.DOCKER_EMAIL' in value "${env.DOCKER_EMAIL}"
+20-03-2023 21:42:07.027 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.destroy - Closing JPA EntityManagerFactory for persistence unit 'default'
+20-03-2023 21:42:07.030 [main] INFO  com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown initiated...
+20-03-2023 21:42:07.058 [main] INFO  com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown completed.
+20-03-2023 21:42:07.062 [main] INFO  o.a.catalina.core.StandardService.log - Stopping service [Tomcat]
+20-03-2023 21:42:07.105 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener.logMessage - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+20-03-2023 21:42:07.201 [main] ERROR o.s.boot.SpringApplication.reportFailure - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dockerConfig': Injection of autowired dependencies failed; nested exception is java.lang.IllegalArgumentException: Could not resolve placeholder 'env.DOCKER_EMAIL' in value "${env.DOCKER_EMAIL}"
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:405)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1431)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:619)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:955)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:734)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295)
+	at ai.openfabric.api.Application.main(Application.java:13)
+Caused by: java.lang.IllegalArgumentException: Could not resolve placeholder 'env.DOCKER_EMAIL' in value "${env.DOCKER_EMAIL}"
+	at org.springframework.util.PropertyPlaceholderHelper.parseStringValue(PropertyPlaceholderHelper.java:180)
+	at org.springframework.util.PropertyPlaceholderHelper.replacePlaceholders(PropertyPlaceholderHelper.java:126)
+	at org.springframework.core.env.AbstractPropertyResolver.doResolvePlaceholders(AbstractPropertyResolver.java:239)
+	at org.springframework.core.env.AbstractPropertyResolver.resolveRequiredPlaceholders(AbstractPropertyResolver.java:210)
+	at org.springframework.core.env.AbstractPropertyResolver.resolveNestedPlaceholders(AbstractPropertyResolver.java:230)
+	at org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertyResolver.getProperty(ConfigurationPropertySourcesPropertyResolver.java:79)
+	at org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertyResolver.getProperty(ConfigurationPropertySourcesPropertyResolver.java:60)
+	at org.springframework.core.env.AbstractEnvironment.getProperty(AbstractEnvironment.java:594)
+	at org.springframework.context.support.PropertySourcesPlaceholderConfigurer$1.getProperty(PropertySourcesPlaceholderConfigurer.java:153)
+	at org.springframework.context.support.PropertySourcesPlaceholderConfigurer$1.getProperty(PropertySourcesPlaceholderConfigurer.java:149)
+	at org.springframework.core.env.PropertySourcesPropertyResolver.getProperty(PropertySourcesPropertyResolver.java:85)
+	at org.springframework.core.env.PropertySourcesPropertyResolver.getPropertyAsRawString(PropertySourcesPropertyResolver.java:74)
+	at org.springframework.util.PropertyPlaceholderHelper.parseStringValue(PropertyPlaceholderHelper.java:153)
+	at org.springframework.util.PropertyPlaceholderHelper.replacePlaceholders(PropertyPlaceholderHelper.java:126)
+	at org.springframework.core.env.AbstractPropertyResolver.doResolvePlaceholders(AbstractPropertyResolver.java:239)
+	at org.springframework.core.env.AbstractPropertyResolver.resolveRequiredPlaceholders(AbstractPropertyResolver.java:210)
+	at org.springframework.context.support.PropertySourcesPlaceholderConfigurer.lambda$processProperties$0(PropertySourcesPlaceholderConfigurer.java:191)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.resolveEmbeddedValue(AbstractBeanFactory.java:936)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1332)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1311)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:656)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:639)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:119)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:399)
+	... 17 common frames omitted
+20-03-2023 21:43:30.301 [main] INFO  m.p.s.DotenvPropertySource.addToEnvironment - Initializing Dotenv with DotenvConfig{directory=null, filename=null, ignoreIfMalformed=false, ignoreIfMissing=true, systemProperties=false, prefix=null}
+20-03-2023 21:43:30.402 [main] INFO  ai.openfabric.api.Application.logStarting - Starting Application using Java 1.8.0_352 on macs-MacBook-Air-9.local with PID 40748 (/Users/dec/Downloads/openfabric-test/openfabric-api/build/classes/java/main started by dec in /Users/dec/Downloads/openfabric-test)
+20-03-2023 21:43:30.407 [main] INFO  ai.openfabric.api.Application.logStartupProfileInfo - The following 2 profiles are active: "base", "local"
+20-03-2023 21:43:32.982 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+20-03-2023 21:43:33.092 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Finished Spring Data repository scanning in 91 ms. Found 1 JPA repository interfaces.
+20-03-2023 21:43:35.444 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer.initialize - Tomcat initialized with port(s): 8080 (http)
+20-03-2023 21:43:35.460 [main] INFO  o.a.coyote.http11.Http11NioProtocol.log - Initializing ProtocolHandler ["http-nio-8080"]
+20-03-2023 21:43:35.461 [main] INFO  o.a.catalina.core.StandardService.log - Starting service [Tomcat]
+20-03-2023 21:43:35.461 [main] INFO  o.a.catalina.core.StandardEngine.log - Starting Servlet engine: [Apache Tomcat/9.0.68]
+20-03-2023 21:43:35.728 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring embedded WebApplicationContext
+20-03-2023 21:43:35.729 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext.prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 5135 ms
+20-03-2023 21:43:36.202 [main] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Starting...
+20-03-2023 21:43:36.338 [main] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Start completed.
+20-03-2023 21:43:36.550 [main] INFO  liquibase.database.log - Set default schema name to public
+20-03-2023 21:43:36.660 [main] INFO  liquibase.lockservice.log - Successfully acquired change log lock
+20-03-2023 21:43:37.163 [main] INFO  liquibase.changelog.log - Reading from public.databasechangelog
+20-03-2023 21:43:37.234 [main] INFO  liquibase.lockservice.log - Successfully released change log lock
+20-03-2023 21:43:37.460 [main] INFO  o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [name: default]
+20-03-2023 21:43:37.553 [main] INFO  org.hibernate.Version.logVersion - HHH000412: Hibernate ORM core version 5.6.12.Final
+20-03-2023 21:43:37.937 [main] INFO  o.h.annotations.common.Version.<clinit> - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+20-03-2023 21:43:38.202 [main] INFO  org.hibernate.dialect.Dialect.<init> - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+20-03-2023 21:43:39.309 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator.initiateService - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+20-03-2023 21:43:39.329 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory - Initialized JPA EntityManagerFactory for persistence unit 'default'
+20-03-2023 21:43:39.399 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration.openEntityManagerInViewInterceptor - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+20-03-2023 21:43:41.236 [main] WARN  c.g.d.core.DockerClientBuilder.build - 'dockerHttpClient' should be set.Falling back to Jersey, will be an error in future releases.
+20-03-2023 21:43:47.193 [main] INFO  com.yahoo.elide.Elide.registerCustomSerde - Registering serde for type : class java.time.Instant
+20-03-2023 21:43:47.196 [main] INFO  com.yahoo.elide.Elide.registerCustomSerde - Registering serde for type : class java.time.OffsetDateTime
+20-03-2023 21:43:47.524 [main] WARN  o.s.b.a.s.s.UserDetailsServiceAutoConfiguration.getOrDeducePassword - 
+
+Using generated security password: 4e517648-c3f1-42d4-971a-f1d45e237532
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+20-03-2023 21:43:47.674 [main] INFO  o.s.s.web.DefaultSecurityFilterChain.<init> - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@42c9b1ee, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@217c6a1e, org.springframework.security.web.context.SecurityContextPersistenceFilter@46590dd0, org.springframework.security.web.header.HeaderWriterFilter@2d9df336, org.springframework.web.filter.CorsFilter@470d183, org.springframework.security.web.authentication.logout.LogoutFilter@77226121, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@66a93b25, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@2a341e3d, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@3fad8636, org.springframework.security.web.session.SessionManagementFilter@70df41f9, org.springframework.security.web.access.ExceptionTranslationFilter@2728add3, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@c0521e5]
+20-03-2023 21:43:48.083 [main] WARN  o.s.b.a.t.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration.checkTemplateLocationExists - Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+20-03-2023 21:43:48.303 [main] INFO  o.a.coyote.http11.Http11NioProtocol.log - Starting ProtocolHandler ["http-nio-8080"]
+20-03-2023 21:43:48.406 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer.start - Tomcat started on port(s): 8080 (http) with context path ''
+20-03-2023 21:43:49.031 [main] INFO  ai.openfabric.api.Application.logStarted - Started Application in 20.981 seconds (JVM running for 23.594)
+20-03-2023 21:43:53.635 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring DispatcherServlet 'dispatcherServlet'
+20-03-2023 21:43:53.636 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet.initServletBean - Initializing Servlet 'dispatcherServlet'
+20-03-2023 21:43:53.642 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet.initServletBean - Completed initialization in 5 ms

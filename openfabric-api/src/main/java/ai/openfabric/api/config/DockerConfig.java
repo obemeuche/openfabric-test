@@ -14,10 +14,10 @@ public class DockerConfig {
     @Value("${username}")
      String USERNAME;
 
-    @Value("${password")
+    @Value("${password}")
      String PASSWORD;
 
-    @Value("${email")
+    @Value("${email}")
      String EMAIL;
 
 
